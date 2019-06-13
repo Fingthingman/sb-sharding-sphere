@@ -19,7 +19,7 @@ public class ConfigController {
     private ConfigService configService;
 
     @GetMapping("/save")
-    public Boolean insert(Config config){
+    public Boolean insert(Config config) {
 
         return configService.save(config);
     }

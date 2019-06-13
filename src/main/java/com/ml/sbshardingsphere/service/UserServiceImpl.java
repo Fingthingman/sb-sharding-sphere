@@ -18,7 +18,7 @@ import java.util.List;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Override
-    public boolean save(User entity){
+    public boolean save(User entity) {
         return super.save(entity);
     }
 

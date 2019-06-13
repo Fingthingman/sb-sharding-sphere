@@ -21,12 +21,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/select")
-    public List<User> select(){
+    public List<User> select() {
         return userService.getUSerList();
     }
 
     @GetMapping("/insert")
-    public Boolean insert(User user){
+    public Boolean insert(User user) {
         return userService.save(user);
     }
 

@@ -5,5 +5,4 @@
 <mapper namespace="com.ml.sbshardingsphere.mapper.UserMapper">
 
 
-
 </mapper>

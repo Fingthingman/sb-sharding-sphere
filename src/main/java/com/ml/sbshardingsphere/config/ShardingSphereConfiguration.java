@@ -57,9 +57,9 @@ public class ShardingSphereConfiguration {
         return ds;
     }
 
-    private Map<String,DataSource> shardingDataSourceMap() throws SQLException {
+    private Map<String, DataSource> shardingDataSourceMap() throws SQLException {
         List<DatasouceProperties> datasouceProperties = shardingDatasourceProperties.getDatasource();
-        Map<String,DataSource> dataSourceMap = null;
+        Map<String, DataSource> dataSourceMap = null;
         if (Objects.nonNull(datasouceProperties)) {
             dataSourceMap = new HashMap<>(datasouceProperties.size());
             for (DatasouceProperties properties : datasouceProperties) {
@@ -67,7 +67,7 @@ public class ShardingSphereConfiguration {
                 ds.setUsername(properties.getUsername());
                 ds.setUrl(properties.getUrl());
                 ds.setPassword(properties.getPassword());
-                dataSourceMap.put(properties.getName(),ds);
+                dataSourceMap.put(properties.getName(), ds);
             }
         }
         return dataSourceMap;
@@ -86,9 +86,9 @@ public class ShardingSphereConfiguration {
     public DataSource shardingDataSource() throws SQLException {
         ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
         shardingRuleConfig.getTableRuleConfigs().add(getUserTableRuleConfiguration());
-        shardingRuleConfig.getBroadcastTables().add("config");
-        shardingRuleConfig.
-        return ShardingDataSourceFactory.createDataSource(shardingDataSourceMap(), shardingRuleConfig,new ConcurrentHashMap<>(),new Properties());
+//        shardingRuleConfig.getBroadcastTables().add("config");
+        shardingRuleConfig.setDefaultDataSourceName("ds0");
+        return ShardingDataSourceFactory.createDataSource(shardingDataSourceMap(), shardingRuleConfig, new ConcurrentHashMap<>(), new Properties());
     }
 
 

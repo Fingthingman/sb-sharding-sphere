@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
  * @Description TODO
  **/
 @Service
-public class ConfigServiceImpl  extends ServiceImpl<ConfigMapper, Config> implements ConfigService {
+public class ConfigServiceImpl extends ServiceImpl<ConfigMapper, Config> implements ConfigService {
 
     @Override
-    public boolean save(Config entity){
+    public boolean save(Config entity) {
         return super.save(entity);
     }
 }

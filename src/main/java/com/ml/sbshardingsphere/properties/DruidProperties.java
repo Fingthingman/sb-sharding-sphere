@@ -12,7 +12,7 @@ import java.util.List;
  * @Description TODO
  **/
 @Configuration
-@ConfigurationProperties(prefix="druid")
+@ConfigurationProperties(prefix = "druid")
 public class DruidProperties {
 
     private String driverClassName;

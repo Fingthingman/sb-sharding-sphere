@@ -12,7 +12,7 @@ import java.util.List;
  * @Description TODO
  **/
 @Configuration
-@ConfigurationProperties(prefix="sharding")
+@ConfigurationProperties(prefix = "sharding")
 public class ShardingDatasourceProperties {
 
     private List<DatasouceProperties> datasource;
